@@ -97,4 +97,66 @@ The application follows a modular design with components for:
 
 See the architecture diagram for a visual representation of the system components.
 
+flowchart TD
+    subgraph UI["Streamlit User Interface"]
+        A[Course Generator Tab] --> B[Course View Tab]
+        B --> C[Quiz Tab]
+    end
 
+    subgraph CoreFunctions["Core Functions"]
+        D[Course Generation]
+        E[Quiz Generation]
+        F[PDF Export]
+        G[Display Functions]
+    end
+
+    subgraph ExternalAPIs["External APIs"]
+        H[Groq API\nLlama 3 70B]
+        I[Google Search API]
+        J[YouTube Data API]
+    end
+
+    subgraph DataFlow["Data Storage"]
+        K[Session State]
+        L[JSON Files]
+        M[PDF Documents]
+    end
+
+    %% UI to Core Functions connections
+    A --> D
+    A --> E
+    B --> F
+    C --> F
+    
+    %% Core Functions to External APIs
+    D --> H
+    D --> I
+    D --> J
+    E --> H
+    
+    %% Core Functions to Display Functions
+    D --> G
+    E --> G
+    
+    %% Data Flow connections
+    D --> K
+    D --> L
+    E --> K
+    E --> L
+    F --> M
+    G --> K
+    
+    %% User input and configuration
+    U[User Input\n& Configuration] --> A
+    
+    %% Legend/Classification
+    classDef primary fill:#4285f4,stroke:#2956a3,color:white
+    classDef secondary fill:#34a853,stroke:#1e7e34,color:white
+    classDef api fill:#fbbc05,stroke:#ce9d03,color:black
+    classDef data fill:#ea4335,stroke:#c53727,color:white
+    
+    class UI primary
+    class CoreFunctions secondary
+    class ExternalAPIs api
+    class DataFlow data
+    class U primary
