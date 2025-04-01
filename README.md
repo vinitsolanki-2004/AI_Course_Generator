@@ -23,7 +23,7 @@ An AI-powered application that generates comprehensive, structured educational c
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone <[repository-url](https://github.com/vinitsolanki-2004/AI_Course_Generator/)>
    cd course-generator
    ```
 
