@@ -96,3 +96,7 @@ The application follows a modular design with components for:
 - External API integrations (Groq, Google Search, YouTube)
 
 See the architecture diagram for a visual representation of the system components.
+
+
+![image](https://github.com/user-attachments/assets/ab10e334-4edf-4732-9c62-1208c42f6c92)
+
