@@ -24,7 +24,6 @@ An AI-powered application that generates comprehensive, structured educational c
 1. Clone the repository:
    ```
    git clone https://github.com/vinitsolanki-2004/AI_Course_Generator/
-   cd course-generator
    ```
 
 2. Install required packages:
@@ -43,7 +42,7 @@ An AI-powered application that generates comprehensive, structured educational c
 
 1. Run the Streamlit app:
    ```
-   streamlit run course_gen.py
+   streamlit run app.py
    ```
 
 2. Enter a course topic in the input field
@@ -98,10 +97,4 @@ The application follows a modular design with components for:
 
 See the architecture diagram for a visual representation of the system components.
 
-## 📄 License
 
-[License information]
-
-## 👥 Contributors
-
-[Contributors information]
