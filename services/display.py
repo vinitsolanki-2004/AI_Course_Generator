@@ -277,7 +277,7 @@ def display_youtube_videos(videos):
     cols = st.columns(min(3, len(videos)))
     for i, video in enumerate(videos):
         with cols[i % len(cols)]:
-            st.image(video["thumbnail"], use_container_width=True)
+            st.image(video["thumbnail"])
             st.markdown(f"**[{video['title']}]({video['url']})**")
             st.caption(f"By {video['channel']}")
             st.markdown(f"[Watch on YouTube]({video['url']})")

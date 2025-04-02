@@ -95,7 +95,7 @@ def generate_course_with_groq(topic, search_content, include_videos=False):
                 {"role": "user", "content": COURSE_GENERATION_TEMPLATE}
             ],
             "temperature": 0.7,
-            "max_tokens": 4000,
+            "max_tokens": 8000,
             "top_p": 0.9
         }
         
